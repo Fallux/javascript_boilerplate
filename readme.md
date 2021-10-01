@@ -1,1 +1,1 @@
-Hier komt straks een beschrijving van het project
+Hier komt straks een beschrijving van het project# javascript_boilerplate
