@@ -1,10 +1,12 @@
 console.log("Hello world");
+let clicks = 0;
 function p1Function(event){
 
     let knop = event.key;
 
     if (knop == 'a'){
-        alert("You pressed the player 1 key button");
+        clicks+=1;
+        document.getElementById("score_p1").innerHTML=clicks;
     }
 }
 
@@ -14,7 +16,8 @@ function p2Function(event){
     let knop = event.key;
 
     if (knop == 'l'){
-        alert("You pressed the player 2 key button");
+        clicks+=1;
+        document.getElementById("score_p2").innerHTML=clicks;
     }
 }
 
