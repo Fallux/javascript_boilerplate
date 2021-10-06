@@ -1,2 +1,12 @@
 console.log("Hello world");
-alert("dit is een test");
+function myFunction(event){
+
+    let knop = event.key;
+
+    if (knop == 'a'){
+        alert("You pressed the key button");
+    }
+
+
+
+}

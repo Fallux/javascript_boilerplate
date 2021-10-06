@@ -1,0 +1,31 @@
+body{
+    background-color: #ff7675;
+}
+#container{
+    margin-left: 30%;
+}
+#game_box{
+    width: 55%;
+    height: 200px;
+    background-color: darkcyan;
+}
+button{
+    margin: 15% 13%;
+    position: realtive;
+}
+#score_p1{
+    width: 12%;
+    height: 30px;
+    background-color: blanchedalmond;
+    border: 1px black solid;
+    border-radius: 2px;
+    float: left;
+}
+#scoreP2{
+    width: 12%;
+    height: 30px;
+    background-color: blanchedalmond;
+    border: 1px black solid;
+    border-radius: 2px;
+    float: right;
+}
