@@ -3,6 +3,7 @@ let htmlSpelIsActief = document.getElementById("spelIsActief");
 let htmlTimeCountdown = document.getElementById("timeCountdown");
 let htmlStart = document.getElementById("startknop");
 let htmlTimer = document.getElementById("timer");
+let htmlWinnaar = document.getElementById("winnaar");
 let htmlSpeler1Knop = document.getElementById("player1Knop");
 let htmlSpeler2Knop = document.getElementById("player2Knop");
 let htmlSpeler1score = document.getElementById("score_p1");
@@ -36,12 +37,23 @@ function spelBegint(){
 }
 
 function aftellenInspel(){
-    
-    function p1Function(){
-        aantalKlikken += 0;
-        htmlSpeler1score.innerHTML= aantalKlikken;
-
+    if(tijd == 0){
+        magJeKlikken = false;
+        if(htmlSpeler1score>htmlSpeler2score){
+            htmlWinnaar.innerHTML = "de winnaar is speler 1!!!";
+        }else if(htmlSpeler1score<htmlSpeler2score){
+            htmlWinnaar.innerHTML = "de winnaar is speler 2!!!";
+        }
+        else{
+            htmlWinnaar.innerHTML = "Het is gelijkspel";
+        }
+    }else{
+        tijd = tijd-1;
+        htmlTimer.innerHTML= tijd;
+        setTimeout(aftellenInspel, 600);
     }
+   
+
 }
 aftellen();//HIERMEE LAAT JE DE FUNCTIE ZIE OP HET SCHERM NA HET LADEN
 
