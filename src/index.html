@@ -16,7 +16,6 @@
         <ul>
             <li>Player 1 gebruikt knop A</li>
             <li>Player 2 gebruikt knop L</li>
-            <li>player 1 counter is iets trager want player 1 heeft een kleine voordeel</li>
             <li>
                 <h3>De game duurt 12 seconden</h3>
             </li>
@@ -24,12 +23,17 @@
                 <h3>De speler die de meeste punten heeft binnen de tijd wint!</h3>
             </li>
         </ul>
+        <div id="spelIsActief"></div>
+        <div id="timeCountdown"></div>
+        <div id="startKnop">start</div>
         <div id="game_box">
+            <div id="timer"></div>
             <div id="score_p1">0</div>
-            <button id="player1" onkeydown="p1Function(event)">player 1 <br> +1</button>
-            <button id="player2" onkeydown="p2Function(event)">player 2 <br> +1</button>
+            <button id="player1Knop" onkeydown="p1Function(event)">player 1 <br> +1</button>
+            <button id="player2Knop" onkeydown="p2Function(event)">player 2 <br> +1</button>
             <div id="score_p2">0</div>
         </div>
+        <div id="reset"></div>
     </div>
     <script src="index.js"></script>
 </body>

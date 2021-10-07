@@ -1,4 +1,4 @@
-body{
+/* body{
     background-color: #ff7675;
 }
 #container{
@@ -29,3 +29,9 @@ button{
     border-radius: 2px;
     float: right;
 }
+#startKnop{
+    width: 120px;
+    height: 50px;
+    border: 1px crimson solid;
+    background-color: blueviolet;
+} */

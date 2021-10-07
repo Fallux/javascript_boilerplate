@@ -1,23 +1,47 @@
 console.log("Hello world");
-let clicks = 0;
-function p1Function(event){
+let htmlSpelIsActief = document.getElementById("spelIsActief");
+let htmlTimeCountdown = document.getElementById("timeCountdown");
+let htmlStart = document.getElementById("startknop");
+let htmlTimer = document.getElementById("timer");
+let htmlSpeler1Knop = document.getElementById("player1Knop");
+let htmlSpeler2Knop = document.getElementById("player2Knop");
+let htmlSpeler1score = document.getElementById("score_p1");
+let htmlSpeler2score = document.getElementById("score_p2");
 
-    let knop = event.key;
+let htmlReset = document.getElementById("reset");
 
-    if (knop == 'a'){
-        clicks+=1;
-        document.getElementById("score_p1").innerHTML=clicks;
+let countDown = 5;
+let tijd = 10;
+let aantalKlikken = 0;
+
+let magJeKlikken = false;
+
+let speler1score = 0;
+let speler2score = 0;
+
+function aftellen(){
+    if(countDown == 0){
+        spelBegint();
+    }else{
+        countDown = countDown-1; 
+        htmlTimeCountdown.innerHTML = countDown;
+        setTimeout(aftellen, 600)
     }
 }
+function spelBegint(){
+    htmlTimer.innerHTML= tijd;
+    htmlTimeCountdown.style.display= "none";
+    magJeKlikken = true;
+    setTimeout(aftellenInspel, 600);
+}
 
+function aftellenInspel(){
+    
+    function p1Function(){
+        aantalKlikken += 0;
+        htmlSpeler1score.innerHTML= aantalKlikken;
 
-function p2Function(event){
-
-    let knop = event.key;
-
-    if (knop == 'l'){
-        clicks+=1;
-        document.getElementById("score_p2").innerHTML=clicks;
     }
 }
+aftellen();//HIERMEE LAAT JE DE FUNCTIE ZIE OP HET SCHERM NA HET LADEN
 
