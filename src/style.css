@@ -1,4 +1,4 @@
-/* body{
+body{
     background-color: #ff7675;
 }
 #container{
@@ -8,10 +8,24 @@
     width: 55%;
     height: 200px;
     background-color: darkcyan;
+    margin-top: 60px;
 }
 button{
-    margin: 15% 13%;
-    position: realtive;
+    margin: 10% 13%;
+    /* position: realtive; */
+}
+#timeCountdown{
+    color: chartreuse;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 150%;
+    margin-left: 50%;
+}
+#timer{
+    color: red;
+    font-weight: bold;
+    font-size: 150%;
+    margin-left: 50%;
 }
 #score_p1{
     width: 12%;
@@ -29,9 +43,37 @@ button{
     border-radius: 2px;
     float: right;
 }
+#winnaar{
+    width: 145px;
+    height: 20px;
+    border: 1px aqua solid;
+    background-color: black;
+    color: greenyellow;
+    border-radius: 100%;
+    margin-left:30%;
+    padding: 10px 50px;
+    display: none;
+}
 #startKnop{
     width: 120px;
     height: 50px;
     border: 1px crimson solid;
     background-color: blueviolet;
-} */
+    float: left;
+}
+a:link{
+    text-decoration: none;
+    color: orange;
+}
+a:visited{
+    text-decoration: none;
+    color: orange;
+}
+#opnieuwKnop{
+    width: 120px;
+    height: 50px;
+    border: 1px crimson solid;
+    background-color: blueviolet;
+    float: left;
+    margin-bottom: 10px;
+}
