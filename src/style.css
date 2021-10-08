@@ -33,7 +33,7 @@ ul{
 }
 #game_box{
     width: 100%;
-    height: 300px;
+    height: 400px;
     background-color: darkcyan;
     margin-top: 60px;
 }
@@ -108,7 +108,7 @@ ul{
 }
 #winnaar{
     width: 145px;
-    height: 20px;
+    height: 50px;
     border: 1px aqua solid;
     background-color: black;
     color: greenyellow;
@@ -116,7 +116,7 @@ ul{
     margin-left:35%;
     padding: 10px 60px 10px 60px;
     text-align: center;
-    display: none;
+    display: hidden;
     margin-bottom: -40px;
     font-weight: bold;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;

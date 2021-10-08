@@ -31,7 +31,7 @@ function aftellen(){
     }else{
         countDown = countDown-1; 
         htmlTimeCountdown.innerHTML = countDown;
-        setTimeout(aftellen, 500)
+        setTimeout(aftellen, 600)
         htmlSpeler1Knop.style.backgroundColor="#f2f2f2"; 
         htmlSpeler2Knop.style.backgroundColor="#f2f2f2";  
         htmlSpeler1score.style.backgroundColor="#f2f2f2"; 
@@ -42,7 +42,7 @@ function spelBegint(){
     htmlTimer.innerHTML= tijd;
     htmlTimeCountdown.style.display= "none";
     magJeKlikken = true;
-    setTimeout(aftellenInspel, 250);
+    setTimeout(aftellenInspel, 350);
 }
 // ik had eerst onkeydown op HTML neergzet zoals bij onclick maar ik liep dezelfde plek weer vast.
 // de knop is niet actief na de countdown tenzij ik op de knoppen klik
@@ -106,7 +106,7 @@ function aftellenInspel(){
     }else{
         tijd = tijd-1;
         htmlTimer.innerHTML= tijd;
-        setTimeout(aftellenInspel, 250);
+        setTimeout(aftellenInspel, 350);
     }
    
 
