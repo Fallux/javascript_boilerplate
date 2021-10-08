@@ -10,33 +10,36 @@
 </head>
 
 <body>
-    <div id="container">
-        <h2>regels:</h2>
-        <br>
-        <ul>
-            <li>Player 1 gebruikt knop A</li>
-            <li>Player 2 gebruikt knop L</li>
-            <li>
-                <h3>De game duurt 12 seconden</h3>
-            </li>
-            <li>
-                <h3>De speler die de meeste punten heeft binnen de tijd wint!</h3>
-            </li>
-        </ul>
-        <div id="spelIsActief"></div>
-        <div id="startKnop">start</div>
-        <div id="opnieuwKnop"><a href="index.html">opnieuw</a></div>
-        <br>
-        <div id="game_box">
-            <div id="timeCountdown"></div>
-            <div id="timer"></div>
-            <div id="winnaar"></div>
-            <div id="score_p1">0</div>
-            <button id="player1Knop">player 1 <br> +1</button>
-            <button id="player2Knop">player 2 <br> +1</button>
-            <div id="score_p2">0</div>
+    <div id="grootContainer">
+        <div id="kleinContainer">
+            <h2>Regels:</h2>
+            <br>
+            <ul>
+                <li><span id="naam1"> Player 1 </span> gebruikt knop A</li>
+                <li><span id="naam2"> Player 2 </span> gebruikt knop L</li>
+                <li>als je op de +1 toetsknop drukt krijg 1 punt op de scoreboard</li>
+                <li>
+                    <h3>De game duurt 12 seconden</h3>
+                </li>
+                <li>
+                    <h3>De speler die de meeste punten heeft binnen de tijd, wint!</h3>
+                </li>
+            </ul>
+            <div id="spelIsActief"></div>
+            <div id="startKnop">start</div>
+            <div id="opnieuwKnop"><a href="index.html">opnieuw</a></div>
+            <br>
+            <div id="game_box">
+                <div id="timeCountdown"></div>
+                <div id="timer"></div>
+                <div id="winnaar"></div>
+                <div id="score_p1">0</div>
+                <div id="score_p2">0</div>
+                <button id="player1Knop">player 1 <br> +1 knop</button>
+                <button id="player2Knop">player 2 <br> +1 knop</button>
+            </div>
+            <div id="reset"></div>
         </div>
-        <div id="reset"></div>
     </div>
     <script src="index.js"></script>
 </body>

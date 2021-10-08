@@ -12,7 +12,7 @@ let htmlSpeler2score = document.getElementById("score_p2");
 let htmlReset = document.getElementById("reset");
 
 let countDown = 5;
-let tijd = 10;
+let tijd = 12;
 
 let aantalKlikken = 0;
 let toetsknop;
@@ -23,18 +23,26 @@ let speler2score = 0;
 
 function aftellen(){
     if(countDown == 0){
+        htmlSpeler1Knop.style.backgroundColor="orange"; 
+        htmlSpeler2Knop.style.backgroundColor="purple";  
+        htmlSpeler1score.style.backgroundColor="orange"; 
+        htmlSpeler2score.style.backgroundColor="purple"; 
         spelBegint();
     }else{
         countDown = countDown-1; 
         htmlTimeCountdown.innerHTML = countDown;
-        setTimeout(aftellen, 100)
+        setTimeout(aftellen, 500)
+        htmlSpeler1Knop.style.backgroundColor="#f2f2f2"; 
+        htmlSpeler2Knop.style.backgroundColor="#f2f2f2";  
+        htmlSpeler1score.style.backgroundColor="#f2f2f2"; 
+        htmlSpeler2score.style.backgroundColor="#f2f2f2"; 
     }
 }
 function spelBegint(){
     htmlTimer.innerHTML= tijd;
     htmlTimeCountdown.style.display= "none";
     magJeKlikken = true;
-    setTimeout(aftellenInspel, 100);
+    setTimeout(aftellenInspel, 250);
 }
 // ik had eerst onkeydown op HTML neergzet zoals bij onclick maar ik liep dezelfde plek weer vast.
 // de knop is niet actief na de countdown tenzij ik op de knoppen klik
@@ -81,12 +89,16 @@ function aftellenInspel(){
         htmlWinnaar.style.display= "block";
         if(speler1score>speler2score){
             htmlWinnaar.innerHTML = "de winnaar is speler 1!";
-            htmlSpeler1score.style.backgroundColor= "green";
+            htmlSpeler1score.style.backgroundColor= "greenyellow";
+            htmlSpeler1Knop.style.backgroundColor= "greenyellow";
             htmlSpeler2score.style.backgroundColor= "red";
+            htmlSpeler2Knop.style.backgroundColor= "red";
         }else if(speler1score<speler2score){
             htmlWinnaar.innerHTML = "de winnaar is speler 2!";
             htmlSpeler1score.style.backgroundColor= "red";
-            htmlSpeler2score.style.backgroundColor= "green";
+            htmlSpeler1Knop.style.backgroundColor= "red";
+            htmlSpeler2score.style.backgroundColor= "greenyellow";
+            htmlSpeler2Knop.style.backgroundColor= "greenyellow";
         }
         else{
             htmlWinnaar.innerHTML = "Het is gelijkspel";
@@ -94,7 +106,7 @@ function aftellenInspel(){
     }else{
         tijd = tijd-1;
         htmlTimer.innerHTML= tijd;
-        setTimeout(aftellenInspel, 100);
+        setTimeout(aftellenInspel, 250);
     }
    
 
